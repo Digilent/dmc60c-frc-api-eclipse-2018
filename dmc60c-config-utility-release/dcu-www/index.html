@@ -58,12 +58,22 @@
                                 <form id="device-info">
                                     <div class="row">
                                         <label class="label col-4">Device ID</label>
-                                        <input type="text" name="DevNum" class="digilent-input col-8">
+                                        <input type="text" name="DevNum" class="digilent-input col-7">
                                     </div>
 
                                     <div class="row">
                                         <label class="label col-4">Device Name</label>
-                                        <input type="text" name="DevName" class="digilent-input col-8">
+                                        <input type="text" name="DevName" class="digilent-input col-7">
+                                    </div>
+
+                                    <div class="row">
+                                        <label class="label col-4 break-word">Manufacture Date</label>
+                                        <input type="text" name="ManDate" class="digilent-input col-7" disabled=true>
+                                    </div>
+
+                                    <div class="row">
+                                        <label class="label col-4 break-word">Serial Number</label>
+                                        <input type="text" name="SN" class="digilent-input col-7" disabled=true>
                                     </div>
                                 </form>
                             </div>
@@ -74,23 +84,26 @@
                                 <p class="form-label">Current Limits</p>
                                 <form class="device-params">
                                     <div class="row">
-                                        <label class="label col-6">Continuous Current Limit</label>
-                                        <input type="text" name="continuousCurrentLimit" class="digilent-input col-6">
+                                        <label class="label col-5">Continuous Current Limit</label>
+                                        <input type="text" name="continuousCurrentLimit" class="digilent-input col-5">
+                                        <div class="unit-label col-2">amps</div>
                                     </div>
 
                                     <div class="row">
-                                        <label class="label col-6">Peak Current Limit</label>
-                                        <input type="text" name="peakCurrentLimit" class="digilent-input col-6">
+                                        <label class="label col-5">Peak Current Limit</label>
+                                        <input type="text" name="peakCurrentLimit" class="digilent-input col-5">
+                                        <div class="unit-label col-2">amps</div>
                                     </div>
 
                                     <div class="row">
-                                        <label class="label col-6">Peak Current Duration</label>
-                                        <input type="text" name="peakCurrentDuration" class="digilent-input col-6">
+                                        <label class="label col-5">Peak Current Duration</label>
+                                        <input type="text" name="peakCurrentDuration" class="digilent-input col-5">
+                                        <div class="unit-label col-2">ms</div>
                                     </div>
 
                                     <div class="row">
-                                        <label class="label col-6">Current Limit Enable</label>
-                                        <select class="digilent-input col-6" name="currentLimitEnable">
+                                        <label class="label col-5">Current Limit Enable</label>
+                                        <select class="digilent-input col-5" name="currentLimitEnable">
                                             <option value="Disabled">Disabled</option>
                                             <option value="Enabled">Enabled</option>
                                         </select>
@@ -104,21 +117,25 @@
                                 <p class="form-label">Limit Switches</p>
                                 <form class="device-params">
                                     <div class="row">
-                                        <label class="label col-6">Forward Limit Switch</label>
-                                        <select class="digilent-input col-6" name="limitSwtFwdType">
-                                            <option value="Disabled">Disabled</option>
+                                        <label class="label col-5">Forward Limit Switch</label>
+                                        <select class="digilent-input col-7" name="limitSwtFwdType">
                                             <option value="Normally Open">Normally Open</option>
                                             <option value="Normally Closed">Normally Closed</option>
                                         </select>
+
+                                        <input id="limitSwtFwdEnable" class="col-1 offset-5" type="checkbox" name="limitSwtFwdEnable" checked>
+                                        <label class="col-5 checkbox-label" for="limitSwtFwdEnable">Enable</label>
                                     </div>
 
                                     <div class="row">
-                                        <label class="label col-6">Reverse Limit Switch</label>
-                                        <select class="digilent-input col-6" name="limitSwtRevType">
-                                            <option value="Disabled">Disabled</option>
+                                        <label class="label col-5">Reverse Limit Switch</label>
+                                        <select class="digilent-input col-7" name="limitSwtRevType">
                                             <option value="Normally Open">Normally Open</option>
                                             <option value="Normally Closed">Normally Closed</option>
                                         </select>
+
+                                        <input id="limitSwtRevEnable" class="col-1 offset-5" type="checkbox" name="limitSwtRevEnable" checked>
+                                        <label class="col-5 checkbox-label" for="limitSwtRevEnable">Enable</label>
                                     </div>
                                 </form>
                             </div>
@@ -137,37 +154,67 @@
                                 </div>
                                 <form class="flex-item flex-content">
                                     <div class="row">
+                                        <label for="p-gain" class="label col-4">P Gain</label>
+                                        <input type="text" name="ProportionalGain" class="digilent-input col-3 slot-0">
+                                        <input type="text" name="ProportionalGain" class="digilent-input col-3 offset-1 slot-1">
+                                    </div>
+
+                                    <div class="row">
+                                        <label for="i-gain" class="label col-4">I Gain</label>
+                                        <input type="text" name="IntegralGain" class="digilent-input col-3 slot-0">
+                                        <input type="text" name="IntegralGain" class="digilent-input col-3 offset-1 slot-1">
+                                    </div>
+
+                                    <div class="row">
+                                        <label for="d-gain" class="label col-4">D Gain</label>
+                                        <input type="text" name="DerivativeGain" class="digilent-input col-3 slot-0">
+                                        <input type="text" name="DerivativeGain" class="digilent-input col-3 offset-1 slot-1">
+                                    </div>
+        
+                                    <div class="row">
+                                        <label for="p-gain" class="label col-4">Feed-Forward Gain</label>
+                                        <input type="text" name="FwdGainConst" class="digilent-input col-3 slot-0">
+                                        <input type="text" name="FwdGainConst" class="digilent-input col-3 offset-1 slot-1">
+                                    </div>
+
+                                    <div class="row">
+                                        <label for="p-gain" class="label col-4">I Zone</label>
+                                        <input type="text" name="IntegralAccLimit" class="digilent-input col-3 slot-0">
+                                        <input type="text" name="IntegralAccLimit" class="digilent-input col-3 offset-1 slot-1">
+                                    </div>
+
+                                    <div class="row">
                                         <label for="p-gain" class="label col-4">Ramp Rate</label>
                                         <input type="text" name="RampRate" class="digilent-input col-3 slot-0">
                                         <input type="text" name="RampRate" class="digilent-input col-3 offset-1 slot-1">
                                     </div>
 
                                     <div class="row">
-                                        <label for="p-gain" class="label col-4">Allowable Error</label>
+                                        <label class="label col-4">Allowable Error</label>
                                         <input type="text" name="AllowableError" class="digilent-input col-3 slot-0">
                                         <input type="text" name="AllowableError" class="digilent-input col-3 offset-1 slot-1">
                                     </div>
 
                                     <div class="row">
-                                        <label for="p-gain" class="label col-4">Forward Max Duty Cycle</label>
+                                        <label class="label col-4">Forward Max Duty Cycle</label>
                                         <input type="text" name="FwdMaxDutyCycle" class="digilent-input col-3 slot-0">
                                         <input type="text" name="FwdMaxDutyCycle" class="digilent-input col-3 offset-1 slot-1">
                                     </div>
 
                                     <div class="row">
-                                        <label for="p-gain" class="label col-4">Reverse Max Duty Cycle</label>
+                                        <label class="label col-4">Reverse Max Duty Cycle</label>
                                         <input type="text" name="RevMaxDutyCycle" class="digilent-input col-3 slot-0">
                                         <input type="text" name="RevMaxDutyCycle" class="digilent-input col-3 offset-1 slot-1">
                                     </div>
 
                                     <div class="row">
-                                        <label for="p-gain" class="label col-4">Forward Nominal Duty Cycle</label>
+                                        <label class="label col-4">Forward Nominal Duty Cycle</label>
                                         <input type="text" name="FwdNominalDutyCycle" class="digilent-input col-3 slot-0">
                                         <input type="text" name="FwdNominalDutyCycle" class="digilent-input col-3 offset-1 slot-1">
                                     </div>
 
                                     <div class="row">
-                                        <label for="p-gain" class="label col-4">Reverse Nominal Duty Cycle</label>
+                                        <label class="label col-4">Reverse Nominal Duty Cycle</label>
                                         <input type="text" name="RevNominalDutyCycle" class="digilent-input col-3 slot-0">
                                         <input type="text" name="RevNominalDutyCycle" class="digilent-input col-3 offset-1 slot-1">
                                     </div>
@@ -184,19 +231,19 @@
                                 <p class="form-label">Soft Limits</p>
                                 <form class="device-params">
                                     <div class="row">
-                                        <label class="label col-6">Forward Soft Limit Threshold</label>
+                                        <label class="label col-5">Forward Soft Limit Threshold</label>
                                         <input type="text" name="limitSoftFwdThreshold" class="digilent-input col-6">
 
-                                        <input class="col-1 offset-6" type="checkbox" name="limitSoftFwdEnable" checked>
-                                        <label class="col-5 checkbox-label">Enable</label>
+                                        <input id="limitSoftFwdEnable" class="col-1 offset-5" type="checkbox" name="limitSoftFwdEnable" checked>
+                                        <label class="col-5 checkbox-label" for="limitSoftFwdEnable">Enable</label>
                                     </div>
 
                                     <div class="row">
-                                        <label class="label col-6">Reverse Soft Limit Threshold</label>
+                                        <label class="label col-5">Reverse Soft Limit Threshold</label>
                                         <input type="text" name="limitSoftRevThreshold" class="digilent-input col-6">
 
-                                        <input class="col-1 offset-6" type="checkbox" name="limitSoftRevEnable" checked>
-                                        <label class="col-5 checkbox-label">Enable</label>
+                                        <input id="limitSoftRevEnable" class="col-1 offset-5" type="checkbox" name="limitSoftRevEnable" checked>
+                                        <label class="col-5 checkbox-label" for="limitSoftRevEnable">Enable</label>
                                     </div>
                                 </form>
                             </div>
@@ -228,17 +275,6 @@
                                         <span id="overTempSticky" class="light"></span>
                                     </div>
                                     <input id="overTempCount" type="text" name="" value="0" disabled class="count col-2">
-                                </div>
-
-                                <div class="row justify-content-between">
-                                    <label class="label col-4">Over Current</label>
-                                    <div class="col-2">
-                                        <span id="overCurrentActive" class="light"></span>
-                                    </div>
-                                    <div class="col-2">
-                                        <span id="overCurrentSticky" class="light"></span>
-                                    </div>
-                                    <input id="overCurrentCount" type="text" name="" value="0" disabled class="count col-2">
                                 </div>
 
                                 <div class="row justify-content-between">

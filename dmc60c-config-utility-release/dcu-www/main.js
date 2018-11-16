@@ -29711,43 +29711,43 @@ var AdvancedModal = /** @class */ (function () {
                     util_1.h("div", { id: "adv-modal", class: "modal-body adv-inset" },
                         util_1.h("form", null,
                             util_1.h("div", { class: "adv-param" },
-                                util_1.h("p", { class: "form-label" }, "PID Tuning"),
-                                util_1.h("div", { class: "row" },
-                                    util_1.h("div", { class: "col-3 offset-3 col-label" }, "Slot 0"),
-                                    util_1.h("div", { class: "col-3 offset-1 col-label" }, "Slot 1")),
-                                util_1.h("div", { class: "row" },
-                                    util_1.h("label", { for: "p-gain", class: "label col-2 offset-1" }, "P Gain"),
-                                    util_1.h("input", { type: "text", name: "ProportionalGain", class: "digilent-input col-3 slot-0" }),
-                                    util_1.h("input", { type: "text", name: "ProportionalGain", class: "digilent-input col-3 offset-1 slot-1" })),
-                                util_1.h("div", { class: "row" },
-                                    util_1.h("label", { for: "p-gain", class: "label col-2 offset-1" }, "I Gain"),
-                                    util_1.h("input", { type: "text", name: "IntegralGain", class: "digilent-input col-3 slot-0" }),
-                                    util_1.h("input", { type: "text", name: "IntegralGain", class: "digilent-input col-3 offset-1 slot-1" })),
-                                util_1.h("div", { class: "row" },
-                                    util_1.h("label", { for: "p-gain", class: "label col-2 offset-1" }, "D Gain"),
-                                    util_1.h("input", { type: "text", name: "DerivativeGain", class: "digilent-input col-3 slot-0" }),
-                                    util_1.h("input", { type: "text", name: "DerivativeGain", class: "digilent-input col-3 offset-1 slot-1" })),
-                                util_1.h("div", { class: "row" },
-                                    util_1.h("label", { for: "p-gain", class: "label col-2 offset-1" }, "Feed-Forward Gain"),
-                                    util_1.h("input", { type: "text", name: "FwdGainConst", class: "digilent-input col-3 slot-0" }),
-                                    util_1.h("input", { type: "text", name: "FwdGainConst", class: "digilent-input col-3 offset-1 slot-1" })),
-                                util_1.h("div", { class: "row" },
-                                    util_1.h("label", { for: "p-gain", class: "label col-2 offset-1" }, "I Zone"),
-                                    util_1.h("input", { type: "text", name: "IntegralAccLimit", class: "digilent-input col-3 slot-0" }),
-                                    util_1.h("input", { type: "text", name: "IntegralAccLimit", class: "digilent-input col-3 offset-1 slot-1" }))),
+                                util_1.h("p", { class: "form-label" }, "Current Limit PID Tuning"),
+                                util_1.h("div", { class: "params-container" },
+                                    util_1.h("div", { class: "row" },
+                                        util_1.h("label", { class: "label col-2" }, "P Gain"),
+                                        util_1.h("input", { type: "text", name: "currentLimitPGain", class: "digilent-input col-3 slot-0" }),
+                                        util_1.h("div", { class: "col-1 unit-label" }),
+                                        util_1.h("label", { class: "label col-2" }, "I Zone"),
+                                        util_1.h("input", { type: "text", name: "currentLimitIZone", class: "digilent-input col-3 slot-0" }),
+                                        util_1.h("div", { class: "col-1 unit-label" })),
+                                    util_1.h("div", { class: "row" },
+                                        util_1.h("label", { class: "label col-2" }, "I Gain"),
+                                        util_1.h("input", { type: "text", name: "currentLimitIGain", class: "digilent-input col-3 slot-0" }),
+                                        util_1.h("div", { class: "col-1 unit-label" }),
+                                        util_1.h("label", { class: "label col-2" }, "F Gain"),
+                                        util_1.h("input", { type: "text", name: "currentLimitFGain", class: "digilent-input col-3 slot-0" }),
+                                        util_1.h("div", { class: "col-1 unit-label" })),
+                                    util_1.h("div", { class: "row" },
+                                        util_1.h("label", { class: "label col-2" }, "D Gain"),
+                                        util_1.h("input", { type: "text", name: "currentLimitDGain", class: "digilent-input col-3 slot-0" }),
+                                        util_1.h("div", { class: "col-1 unit-label" })))),
                             util_1.h("div", { class: "adv-param" },
                                 util_1.h("p", { class: "form-label" }, "Other Parameters"),
-                                util_1.h("div", { class: "other-params" },
+                                util_1.h("div", { class: "params-container" },
                                     util_1.h("div", { class: "row" },
-                                        util_1.h("label", { for: "p-gain", class: "label col-3" }, "ADC Current Multiplier"),
-                                        util_1.h("input", { type: "text", name: "adcCurrentMultiplier", class: "digilent-input col-3" }),
-                                        util_1.h("label", { for: "p-gain", class: "label col-3" }, "Analog Status Frame Rate"),
-                                        util_1.h("input", { type: "text", name: "analogStatusFramePeriod", class: "digilent-input col-3" })),
+                                        util_1.h("label", { class: "label col-2" }, "ADC Current Multiplier"),
+                                        util_1.h("input", { type: "text", name: "adcCurrentMultiplier", class: "digilent-input col-3 slot-0" }),
+                                        util_1.h("div", { class: "col-1 unit-label" }),
+                                        util_1.h("label", { class: "label col-2" }, "Analog Status Frame Rate"),
+                                        util_1.h("input", { type: "text", name: "analogStatusFramePeriod", class: "digilent-input col-3 slot-0" }),
+                                        util_1.h("div", { class: "col-1 unit-label" }, "ms")),
                                     util_1.h("div", { class: "row" },
-                                        util_1.h("label", { for: "p-gain", class: "label col-3" }, "Encoder Status Frame Rate"),
-                                        util_1.h("input", { type: "text", name: "encoderStatusFramePeriod", class: "digilent-input col-3" }),
-                                        util_1.h("label", { for: "p-gain", class: "label col-3" }, "General Status Frame Rate"),
-                                        util_1.h("input", { type: "text", name: "generalStatusFramePeriod", class: "digilent-input col-3" })))))),
+                                        util_1.h("label", { class: "label col-2" }, "Encoder Status Frame Rate"),
+                                        util_1.h("input", { type: "text", name: "encoderStatusFramePeriod", class: "digilent-input col-3 slot-0" }),
+                                        util_1.h("div", { class: "col-1 unit-label" }, "ms"),
+                                        util_1.h("label", { class: "label col-2" }, "General Status Frame Rate"),
+                                        util_1.h("input", { type: "text", name: "generalStatusFramePeriod", class: "digilent-input col-3 slot-0" }),
+                                        util_1.h("div", { class: "col-1 unit-label" }, "ms")))))),
                     util_1.h("div", { class: "modal-footer" },
                         util_1.h("div", { class: "col" },
                             util_1.h("button", { type: "button", class: "block-btn", "data-dismiss": "modal" }, "Close")),
@@ -29788,6 +29788,7 @@ var FlashModal = /** @class */ (function () {
     function FlashModal() {
         var _this = this;
         this.progress = '0';
+        this.successful = false;
         this.template = (util_1.h("div", { class: "modal fade", id: "flashModal", tabindex: "-1", role: "dialog", "aria-labelledby": "flashModalLabel", "aria-hidden": "true" },
             util_1.h("div", { class: "modal-dialog", role: "document" },
                 util_1.h("div", { class: "modal-content" },
@@ -29875,6 +29876,7 @@ var FlashModal = /** @class */ (function () {
             cache: false,
             success: function (result) {
                 console.log(result);
+                _this.successful = true;
                 _this.goToSuccessSlide();
             },
             error: function (err) {
@@ -29932,30 +29934,39 @@ var flash_modal_1 = __webpack_require__(/*! ./flash-modal */ "./src/flash-modal.
 var advanced_modal_1 = __webpack_require__(/*! ./advanced-modal */ "./src/advanced-modal.tsx");
 var DeviceCardsList = /** @class */ (function () {
     function DeviceCardsList(el) {
-        this.template = function (props) { return (util_1.h("div", { id: props.sessionID, className: "x-card", onClick: "app.selectDevice(" + props.sessionID + ", event)" },
-            util_1.h("div", { class: "card-details" },
-                util_1.h("div", null,
-                    "Session ID: ",
-                    util_1.h("span", { class: "sess-id" },
-                        "0x",
-                        props.sessionID.toString(16).toUpperCase())),
-                util_1.h("div", { class: "dev-name" },
-                    "Name: ",
-                    util_1.h("span", null, props.name)),
-                util_1.h("div", { class: "fw-version" },
-                    "FW Version: ",
-                    util_1.h("span", null, props.version))),
-            util_1.h("div", { className: "menu" },
-                util_1.h("img", { src: "dots.svg", className: "dots dropdown-toggle card-icon", id: "dropdownMenuButton", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" }),
-                util_1.h("div", { className: "dropdown-menu", "aria-labeledby": "dropdownMenuButton" },
-                    util_1.h("a", { className: "dropdown-item", href: "#", onclick: "app.startFlash(" + props.sessionID + ")", "data-toggle": "modal", "data-target": "#flashModal" }, "Flash Firmware"),
-                    util_1.h("a", { className: "dropdown-item", href: "#", onclick: "", "data-toggle": "modal", "data-target": "#advancedModal" }, "Advanced Settings"))),
-            util_1.h("img", { src: "light.svg", className: "flash-leds card-icon", title: "Flash LEDs", onClick: "app.flashLEDs(" + props.sessionID + ", event)" }))); };
+        this.template = function (props) {
+            console.log(props);
+            return (util_1.h("div", { id: props.sessionID, className: "x-card", onClick: "app.selectDevice(" + props.sessionID + ", event)" },
+                util_1.h("div", { class: "card-details" },
+                    util_1.h("div", null,
+                        "Device ID: ",
+                        util_1.h("span", null,
+                            "0x",
+                            props.deviceID.toString(16).toUpperCase().padStart(4, '0'))),
+                    util_1.h("div", { class: "sess-id" },
+                        "Session ID: ",
+                        util_1.h("span", null,
+                            "0x",
+                            props.sessionID.toString(16).toUpperCase())),
+                    util_1.h("div", { class: "dev-name" },
+                        "Name: ",
+                        util_1.h("span", null, props.name)),
+                    util_1.h("div", { class: "fw-version" },
+                        "FW Version: ",
+                        util_1.h("span", null, props.version))),
+                util_1.h("div", { className: "menu" },
+                    util_1.h("img", { src: "dots.svg", className: "dots dropdown-toggle card-icon", id: "dropdownMenuButton", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" }),
+                    util_1.h("div", { className: "dropdown-menu", "aria-labeledby": "dropdownMenuButton" },
+                        util_1.h("a", { className: "dropdown-item", href: "#", onclick: "app.startFlash(" + props.sessionID + ")", "data-toggle": "modal", "data-target": "#flashModal" }, "Flash Firmware"),
+                        util_1.h("a", { className: "dropdown-item", href: "#", onclick: "", "data-toggle": "modal", "data-target": "#advancedModal" }, "Advanced Settings"))),
+                util_1.h("img", { src: "light.svg", className: "flash-leds card-icon", title: "Flash LEDs", onClick: "app.flashLEDs(" + props.sessionID + ", event)" })));
+        };
         this.ref = jquery_1.default('#' + el)[0];
     }
     DeviceCardsList.prototype.addDevice = function (_a) {
-        var sessionID = _a.sessionID, name = _a.name, version = _a.version;
-        this.ref.appendChild(util_1.createElement(this.template({ sessionID: sessionID, name: name, version: version })));
+        var deviceID = _a.deviceID, sessionID = _a.sessionID, name = _a.name, version = _a.version, sn = _a.sn;
+        console.log('Device:', deviceID);
+        this.ref.appendChild(util_1.createElement(this.template({ deviceID: deviceID, sessionID: sessionID, name: name, version: version, sn: sn })));
         jquery_1.default('#config-panel').removeClass('d-none');
         jquery_1.default('#no-devices').addClass('d-none');
     };
@@ -29982,7 +29993,7 @@ var wsMsg;
 (function (wsMsg) {
     wsMsg["UpdateParameters"] = "update-parameters";
     wsMsg["DeviceEnumeration"] = "device-enumeration";
-    wsMsg["FirmwareFlash"] = "firmware-flash";
+    wsMsg["FirmwareFlash"] = "firmware-flashing";
     wsMsg["FlashLEDs"] = "flash-leds";
     wsMsg["Faults"] = "faults";
     wsMsg["RestoreDefaults"] = "restore-defaults";
@@ -30009,28 +30020,27 @@ var App = /** @class */ (function () {
             _this.devices = devices;
             _this.deviceCardsList.setDevices(devices.map(function (device) {
                 return {
+                    deviceID: device.info.DevNum,
                     sessionID: device.info.SessID,
                     name: device.info.DevName,
-                    version: '0x' + device.info.FwverApp.toString(16)
+                    version: '0x' + device.info.FwverApp.toString(16),
+                    sn: device.info.SN
                 };
             }));
         });
-        this.transport.listen('firmware-flashing')
+        this.transport.listen(wsMsg.FirmwareFlash)
             .subscribe(function (response) {
             _this.flashModal.updateProgress(response);
-        });
-        this.transport.onError(wsMsg.UpdateParameters)
-            .subscribe(function (error) {
-            // report the error & highlight the 
-            _this.newMessage(error.message, 'error');
         });
         this.transport.onError('test')
             .subscribe(function (error) {
             _this.newMessage(error.Payload.message, 'error');
         });
         this.transport.onError(wsMsg.UpdateParameters)
-            .subscribe(function (packet) {
-            packet.Payload;
+            .subscribe(function (error) {
+            var _a = error.Payload, message = _a.message, parameter = _a.parameter;
+            _this.newMessage(message, 'error');
+            _this.paramUpdateError(parameter);
         });
         this.transport.listen(wsMsg.UpdateParameters)
             .subscribe(function (updatedParams) {
@@ -30057,6 +30067,8 @@ var App = /** @class */ (function () {
         });
         // reset modal on close
         jquery_1.default('#flashModal').on('hidden.bs.modal', function () {
+            if (_this.flashModal.successful)
+                console.log('Success!');
             _this.flashModal.resetModal();
         });
         // disables previous input if checkbox is checked
@@ -30104,23 +30116,23 @@ var App = /** @class */ (function () {
         this.newMessage('Updating parameters');
         var info = jquery_1.default("#device-info :input").serializeArray();
         var params = jquery_1.default(".device-params :input").serializeArray();
-        var advParams = jquery_1.default(".other-params :input").serializeArray();
+        var advParams = jquery_1.default(".adv-param :input").serializeArray();
         var slot0 = jquery_1.default(".slot-0").serializeArray();
         var slot1 = jquery_1.default(".slot-1").serializeArray();
         params = params.concat(advParams);
-        console.log(params);
         var data = {
             "info": this.formToJSON(info),
             "parameters": this.formToJSON(params)
         };
         data.parameters['limitSoftFwdEnable'] = data.parameters['limitSoftFwdEnable'] ? true : false;
         data.parameters['limitSoftRevEnable'] = data.parameters['limitSoftRevEnable'] ? true : false;
+        data.parameters['limitSwtFwdEnable'] = data.parameters['limitSwtFwdEnable'] ? true : false;
+        data.parameters['limitSwtRevEnable'] = data.parameters['limitSwtRevEnable'] ? true : false;
         data.parameters['slot0'] = this.formToJSON(slot0);
         data.parameters['slot1'] = this.formToJSON(slot1);
         var swtTypeToNumeric = {
-            "Normally Open": 0,
-            "Normally Closed": 1,
-            "Disabled": 2,
+            "Normally Open": false,
+            "Normally Closed": true,
         };
         var currentLimitToNumeric = {
             "Disabled": false,
@@ -30176,6 +30188,8 @@ var App = /** @class */ (function () {
         // only need DevName & DevNum from info
         jquery_1.default('[name=DevName]')[0].value = device.info.DevName;
         jquery_1.default('[name=DevNum]')[0].value = device.info.DevNum;
+        jquery_1.default('[name=ManDate]')[0].value = device.info.ManDate;
+        jquery_1.default('[name=SN]')[0].value = device.info.SN;
         for (var param in device.parameters) {
             if (/slot/g.test(param)) {
                 var formattedParam = param.replace(/(\d$)/g, "-$1");
@@ -30189,10 +30203,9 @@ var App = /** @class */ (function () {
             else {
                 var el = jquery_1.default("[name=" + param + "]")[0];
                 if (el) {
-                    var swtType = ['Normally Open', 'Normally Closed', 'Disabled'];
+                    var swtBoolToString = function (val) { return val ? 'Normally Closed' : 'Normally Open'; };
                     var boolToString = function (val) { return (val) ? 'Enabled' : 'Disabled'; };
-                    var value = (typeof device.parameters[param] === 'number' && !/Soft/g.test(param) && !/Current/g.test(param) && !/FramePeriod/g.test(param)) ?
-                        swtType[device.parameters[param]] :
+                    var value = (/limitSwt.+Type/g.test(param)) ? swtBoolToString(device.parameters[param]) :
                         (/currentLimitEnable/g.test(param)) ?
                             boolToString(device.parameters[param]) :
                             device.parameters[param];
@@ -30224,13 +30237,14 @@ var App = /** @class */ (function () {
             }
         }
     };
-    App.prototype.paramUpdateError = function (inputName) {
-        jquery_1.default("input[name=" + inputName + "]").addClass('input-error');
+    App.prototype.paramUpdateError = function (inputName, inputClass) {
+        var selector = "[name=" + inputName + "]";
+        selector += (inputClass) ? "." + inputClass : '';
+        jquery_1.default(selector).addClass('input-error');
     };
     App.prototype.paramUpdateSuccess = function (inputName, inputClass) {
         var selector = "[name=" + inputName + "]";
         selector += (inputClass) ? "." + inputClass : '';
-        console.log('Update selector:', selector);
         jquery_1.default(selector).removeClass('input-error');
         jquery_1.default(selector).addClass('input-success');
         setTimeout(function () {
@@ -30298,15 +30312,20 @@ var operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs
 var Transport = /** @class */ (function () {
     function Transport() {
         var _a;
-        this.logPacket = function (data) {
+        var _this = this;
+        this.logErrorPacket = function (data) { return _this.log(data, console.error); };
+        this.log = function (data, out) {
             var type = data.type, payload = __rest(data, ["type"]);
-            console.log(type, payload);
+            out = out || console.log;
+            out(type, payload);
             return data;
         };
+        this.logPacket = function (data) { return _this.log(data); };
         this.ws = new WebSocket("ws://" + location.host + "/websocket");
-        _a = operators_1.partition(function (packet) { return !packet.type.includes(':error'); })(rxjs_1.fromEvent(this.ws, "message").pipe(operators_1.map(function (event) {
+        _a = operators_1.partition(function (packet) { return !packet.type.includes(':error'); })(rxjs_1.fromEvent(this.ws, "message").pipe(// <-- start here. note: Typescript doesn't play well with partition in the pipe
+        operators_1.map(function (event) {
             return event.data.split(/\n/g).filter(function (data) { return data; });
-        }), operators_1.flatMap(function (packet) { return packet; }), // separate multiple packets from previous map into individual observables
+        }), operators_1.flatMap(function (packet) { return packet; }), // note: separate multiple packets from previous map into individual observables
         operators_1.map(function (packet) {
             return JSON.parse(packet || '{}');
         }))), this.ws$ = _a[0], this.wsError$ = _a[1];
@@ -30321,7 +30340,7 @@ var Transport = /** @class */ (function () {
         this.ws.send(JSON.stringify(data));
     };
     Transport.prototype.onError = function (type) {
-        return this.wsError$.pipe(operators_1.map(this.logPacket), operators_1.filter(function (packet) { return packet.type === type + ":error"; }), operators_1.map(function (packet) {
+        return this.wsError$.pipe(operators_1.map(this.logErrorPacket), operators_1.filter(function (packet) { return packet.type === type + ":error"; }), operators_1.map(function (packet) {
             var type = packet.type, payload = __rest(packet, ["type"]);
             return payload;
         }));
