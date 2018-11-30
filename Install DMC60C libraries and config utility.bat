@@ -35,7 +35,7 @@ if "!Password!"=="" (set PASSOPT=
 ) ELSE (
 set PASSOPT=-pw !Password!
 )
-.\pscp.exe -batch %PASSOPT% -r "dmc60c-config-utility-release" %USER%@%IPADDR%:/home/admin
+.\pscp.exe %PASSOPT% -r "dmc60c-config-utility-release" %USER%@%IPADDR%:/home/admin
 if %ERRORLEVEL% NEQ 0 exit
 .\pscp.exe %PASSOPT% "%USERPROFILE%\wpilib\common\current\lib\linux\athena\shared\*.so" %USER%@%IPADDR%:/usr/local/frc/lib
 .\pscp.exe %PASSOPT% "%USERPROFILE%\wpilib\common\current\lib\linux\athena\shared\*.so.3.2" %USER%@%IPADDR%:/usr/local/frc/lib
