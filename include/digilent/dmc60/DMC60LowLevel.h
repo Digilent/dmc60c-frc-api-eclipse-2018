@@ -968,6 +968,12 @@ public:
 	 */
 	DMC_Code enableCurrentLimit(bool enabled);
 
+	/**
+	 * \fn DMC_Code isCurrentLimitEnabled(bool *enabled)
+	 * \brief Returns whether or not the current limit is enabled.
+	 * \param enabled Buffer to store the result.
+	 * \return DMC_Code Status code.
+	 */
 	DMC_Code isCurrentLimitEnabled(bool *enabled);
 
 	DMC_Code setCurrentLimitPGain(double P);
