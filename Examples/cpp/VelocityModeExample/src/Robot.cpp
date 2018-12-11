@@ -10,7 +10,7 @@
 
 #include <IterativeRobot.h>
 #include "Joystick.h"
-#include "digilent/DMC60/DMC60C.h"
+#include "digilent/DMC60/WPI_DMC60C.h"
 
 /*
  * This project uses a joystick to control a DMC60C in velocity mode.
@@ -25,7 +25,7 @@ public:
 	//Create a DMC60C object with device number 1, wheel diameter of 203.2mm,
 	//the encoder is on the output of the gearbox, so put a 1 for gearbox ratio.
 	//The encoder has 20 pulses per channel per revolution.
-	DMC60::DMC60C * _dmc = new DMC60::DMC60C(1, 203.2, 1, 20);
+	DMC60::WPI_DMC60C * _dmc = new DMC60::WPI_DMC60C(1, 203.2, 1, 20);
 
 	bool _startbutton = false;
 
@@ -49,19 +49,15 @@ public:
 	void TeleopPeriodic() {
 		//Get inputs.
 		bool btn1 = _joy->GetRawButton(1);
-		bool startbutton = _joy->GetRawButton(8);
 
 		double stick = -1 * _joy->GetY();
 
 		if (btn1) {//A button on XBox controller.
 			_dmc->driveVelocity(stick);
 		}
-		if (startbutton & !_startbutton){//Start button is pressed.
+		else{
 			_dmc->Disable();
 		}
-
-		//Save last startbutton state.
-		_startbutton=startbutton;
 
 	}
 

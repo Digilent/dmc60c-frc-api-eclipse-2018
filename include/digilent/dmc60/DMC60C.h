@@ -3,13 +3,9 @@
 #include <cstdint>
 #include <vector>
 #include <sys/types.h>
-#include "MotorSafetyHelper.h"
-#include "MotorSafety.h"
-#include "ErrorBase.h"
+#include <memory>
+
 #include "DMC60LowLevel.h"
-#include "SpeedController.h"
-#include "SmartDashboard/SendableBase.h"
-#include "SmartDashboard/SendableBuilder.h"
 
 namespace DMC60{
 
@@ -44,16 +40,12 @@ namespace DMC60{
 /**
  * \class DMC60C
  *
- * \brief High Level DMC60C Interface
+ * \brief Mid level DMC60C Interface
  *
- * This class contains all of the high level functions
- * used to communicate with the DMC60C.
+ * This class contains all of the mid level functions
+ * used to communicate with the DMC60C. This is used in Java, Labview and CPP implementations.
  */
-class DMC60C:
-			public frc::MotorSafety,
-			public frc::ErrorBase,
-			public frc::SpeedController,
-			public frc::SendableBase
+class DMC60C
 {
 public:
 	/**
@@ -468,100 +460,21 @@ public:
 	 */
 	void configIndexActiveEdge(bool edge);
 
-	//SpeedController
-	/**
-	 * \fn void Set(double speed)
-	 * \brief Set command used in WPI Speedcontroller class. Sets the speed to the specified duty cycle.
-	 * \param speed Duty cycle (-1.0 to 1.0)
-	 */
-	void Set(double speed) override;
-	/**
-	 * \fn double Get()
-	 * \brief Get command used in WPI Speedcontroller class. Gets the current duty cycle.
-	 * \return Duty cycle (-1.0 to 1.0)
-	 */
-	double Get() const override;
 	/**
 	 * \fn void SetInverted(bool isInverted)
 	 * \brief Inverts the motor direction.
 	 * \param isInverted If true, motor will spin in reverse direction.
 	 */
-	void SetInverted(bool isInverted) override;
+	void SetInverted(bool isInverted);
 	/**
 	 * \fn bool GetInverted()
 	 * \brief Returns whether or not the motor is inverted.
 	 * \return True if motor is inverted, false otherwise.
 	 */
-	bool GetInverted() const override;
-	/**
-	 * \fn void Disable()
-	 * \brief Disable command used in WPI Speedcontroller class. Disables the motor.
-	 */
-	void Disable() override;
-
-	//PIDOutput
-	/**
-	 * \fn void PIDWrite(double output)
-	 * \brief Virtual function overload from PIDOutput class in SpeedController. Sets the duty cycle.
-	 * \param output Signed duty cycle (-1 to 1).
-	 */
-	void PIDWrite(double output) override;
-
-	//MotorSafety
-	/**
-	 * \fn void SetExpiration(double timeout)
-	 * \brief Sets the motor safety timeout. When motor safety is enabled, control frames must be sent at least once every timeout period
-	 * or else the motor safety will disable the motor.
-	 * \param timeout Timeout value in seconds.
-	 */
-	void SetExpiration(double timeout) override;
-	/**
-	 * \fn double GetExpiration()
-	 * \brief Gets the motor safety timeout.
-	 * \return Motor safety timeout period in seconds.
-	 */
-	double GetExpiration() const override;
-	/**
-	 * \fn bool IsAlive()
-	 * \brief Checks to see if the motor controller is still working or if it has timeout out.
-	 * \return True if motor is still operating and hasn't timed out.
-	 */
-	bool IsAlive() const override;
-	/**
-	 * \fn void StopMotor()
-	 * \brief Stops the motor.
-	 */
-	void StopMotor() override;
-	/**
-	 * \fn void SetSafetyEnabled(bool enabled)
-	 * \brief Sets the motor safety feature on or off.
-	 * \param enabled True to enable, false to disable.
-	 */
-	void SetSafetyEnabled(bool enabled) override;
-	/**
-	 * \fn bool IsSafetyEnabled()
-	 * \brief Returns whether or not the motor safety feature is enabled or not.
-	 * \return True if enabled, false otherwise.
-	 */
-	bool IsSafetyEnabled() const override;
-	/**
-	 * \fn void GetDescription(llvm::raw_ostream& desc)
-	 * \brief Prints the DMC ID to an output stream.
-	 * \param desc Address of output stream.
-	 */
-	void GetDescription(llvm::raw_ostream& desc) const override;
-
+	bool GetInverted() const;
 protected:
-	/**
-	 * \fn void InitSendable(frc::SendableBuilder& builder)
-	 * \brief Initializes the DMC60C for use as a sendable object in the FRC smart dashboard.
-	 */
-	void InitSendable(frc::SendableBuilder& builder);
-private:
 
-	const char* getErrorMessage(DMC_Code Error) const;
 	std::unique_ptr<DMC60LowLevel> _DMC60LowLevel;
-	std::unique_ptr<MotorSafetyHelper> _MotorSafetyHelper;
 	int _deviceNumber;
 	double _wheelDiametermm;
 	double _gearRatio;
@@ -570,6 +483,9 @@ private:
 	bool _isEnabled;
 	bool _isMotorReversed;
 	bool _isEncoderReversed;
+	
+private:
+	const char* getErrorMessage(DMC_Code Error) const;
 };
 
 }

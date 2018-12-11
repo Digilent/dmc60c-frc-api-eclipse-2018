@@ -17,18 +17,21 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * the motor position will be controlled by the left joystick.
  */
 public class Robot extends IterativeRobot {
-	private DMC60C _dmc60c = new DMC60C(2);//DMC60C with devicenum 2
+	private DMC60C _dmc60c = new DMC60C(5);//DMC60C with devicenum 5
 	private Joystick _joy = new Joystick(0);//Controller on USB slot 0
 	private double Y;
 
 	public void robotInit() {
 		_dmc60c.ConfigWheel(200, 12, 20);//20cm wheel, with encoder on the output of the gearbox (1:1), and 20 encoder ticks per revolution.
 		//The PID constants can be configured here or in the web configuration utility.
-		//_dmc60c.ConfigPID(0, (float)10, (float).001, (float)6, (float)0);//Slot 0, P=10, I=.001, D=6, F=0.
+		_dmc60c.ConfigPID(0, (float)10, (float).001, (float)6, (float)0);//Slot 0, P=10, I=.001, D=6, F=0.
 		_dmc60c.SetPIDSlot(0);//Set current PID slot to 0.
+		_dmc60c.InvertEncoder(true);//If the motor is not responding correctly, the encoder might need to be inverted.
+		_dmc60c.setInverted(false);//Change this to change the direction of forward and backward.
 	}
 
 	public void teleopInit() {
+		
 		_dmc60c.ZeroEncoderPosition();//Sets the current position to zero
 	}
 	
@@ -41,12 +44,12 @@ public class Robot extends IterativeRobot {
 			
 		}
 		else {//No button is held
-			_dmc60c.Disable();
+			_dmc60c.disable();
 		}
 	}
 	
 	public void disabledInit() {
-		_dmc60c.Disable();
+		_dmc60c.disable();
 	}
 
 }

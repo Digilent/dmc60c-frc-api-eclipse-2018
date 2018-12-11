@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['sessid',['sessid',['../struct_d_m_c_info__t.html#ab6e86ea02050b6fb14e7f592e7861f01',1,'DMCInfo_t']]],
-  ['szdevname',['szDevName',['../struct_d_m_c_info__t.html#a7976c71a4cbfd875137cb6d7cbee5b5f',1,'DMCInfo_t']]],
-  ['szhardwarever',['szHardwareVer',['../struct_d_m_c_info__t.html#aaba8013aee7c45cce4a7fd008d4cb4dd',1,'DMCInfo_t']]],
-  ['szmandate',['szManDate',['../struct_d_m_c_info__t.html#aa4635b59ba703a48d1225933c5880865',1,'DMCInfo_t']]],
-  ['szmanname',['szManName',['../struct_d_m_c_info__t.html#abb8e60e715e0dacf03de7e7009dc4fa3',1,'DMCInfo_t']]],
-  ['szprodname',['szProdName',['../struct_d_m_c_info__t.html#aed350db74a4ad6377584bfe03be1f899',1,'DMCInfo_t']]],
-  ['szsn',['szSN',['../struct_d_m_c_info__t.html#a6d438abca367165d7a218e11772e2aa3',1,'DMCInfo_t']]]
+  ['sessid',['sessid',['../struct_d_m_c_info__t.html#af42cf7d97705c3e19b5754b1ca4b084e',1,'DMCInfo_t']]],
+  ['szdevname',['szDevName',['../struct_d_m_c_info__t.html#adf9e1bc9c8e0365b3c07e66b1752722d',1,'DMCInfo_t']]],
+  ['szhardwarever',['szHardwareVer',['../struct_d_m_c_info__t.html#a880d070006c13b4342e8f36503466aa5',1,'DMCInfo_t']]],
+  ['szmandate',['szManDate',['../struct_d_m_c_info__t.html#af87d8aca744b337017f546fd0a972577',1,'DMCInfo_t']]],
+  ['szmanname',['szManName',['../struct_d_m_c_info__t.html#aa7916c38650442757e44e9927563aa9b',1,'DMCInfo_t']]],
+  ['szprodname',['szProdName',['../struct_d_m_c_info__t.html#a221043f6943d93308f91d726a729186b',1,'DMCInfo_t']]],
+  ['szsn',['szSN',['../struct_d_m_c_info__t.html#a5b154423cacdf89b71d6e013ad95c546',1,'DMCInfo_t']]]
 ];

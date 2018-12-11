@@ -10,7 +10,7 @@
 
 #include <IterativeRobot.h>
 #include "Joystick.h"
-#include "digilent/DMC60/DMC60C.h"
+#include "digilent/DMC60/WPI_DMC60C.h"
 
 /**
  * This project uses a joystick to control a DMC60C in position mode.
@@ -25,7 +25,7 @@ public:
 
 	//Create a DMC60C object with device number 1, wheel diameter of 203.2mm,
 	//on the input of a gearbox with a ratio of 12:1, and an encoder that has 20 pulses per channel per revolution.
-	DMC60::DMC60C * _dmc = new DMC60::DMC60C(5, 203.2, 12, 20);
+	DMC60::WPI_DMC60C * _dmc = new DMC60::WPI_DMC60C(5, 203.2, 12, 20);
 
 	bool _btn2 = false;
 	bool _startbutton = false;
@@ -39,6 +39,8 @@ public:
 		_dmc->configPID(0, 10, .001, 6, 0);
 		//Sets the current encoder position to 0.
 		_dmc->zeroEncoderPosition();
+		_dmc->invertEncoder(true);//If the motor is not responding correctly, the encoder might need to be inverted.
+		_dmc->SetInverted(false);//Change this to change the direction of forward and backward.
 	}
 
 	void DisabledInit(){
@@ -46,12 +48,8 @@ public:
 		_dmc->Disable();
 	}
 
-	void TeleopInit() {
-
-	}
-
 	void TeleopPeriodic() {
-		/* get inputs */
+		//Get Inputs.
 		bool btn1 = _joy->GetRawButton(1);
 		bool btn2 = _joy->GetRawButton(2);
 		bool startbutton = _joy->GetRawButton(8);

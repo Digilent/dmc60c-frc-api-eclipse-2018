@@ -1,15 +1,15 @@
 var struct_d_m_c_info__t =
 [
-    [ "sessid", "struct_d_m_c_info__t.html#ab6e86ea02050b6fb14e7f592e7861f01", null ],
-    [ "devnum", "struct_d_m_c_info__t.html#abd489fd1f1815e65eb6dfb1be05d17d0", null ],
-    [ "pdid", "struct_d_m_c_info__t.html#ae493221664bd2db2b9e895a0af4f1745", null ],
-    [ "imgtyp", "struct_d_m_c_info__t.html#aeb34c9ea64cc9d39c52cd33ac8c75785", null ],
-    [ "fwverApp", "struct_d_m_c_info__t.html#acc5eef9b92b0db1c310fba04f573d83f", null ],
-    [ "fwverBoot", "struct_d_m_c_info__t.html#ae9b6e1cba33806836faa66127c6f7beb", null ],
-    [ "szDevName", "struct_d_m_c_info__t.html#a7976c71a4cbfd875137cb6d7cbee5b5f", null ],
-    [ "szManName", "struct_d_m_c_info__t.html#abb8e60e715e0dacf03de7e7009dc4fa3", null ],
-    [ "szProdName", "struct_d_m_c_info__t.html#aed350db74a4ad6377584bfe03be1f899", null ],
-    [ "szManDate", "struct_d_m_c_info__t.html#aa4635b59ba703a48d1225933c5880865", null ],
-    [ "szHardwareVer", "struct_d_m_c_info__t.html#aaba8013aee7c45cce4a7fd008d4cb4dd", null ],
-    [ "szSN", "struct_d_m_c_info__t.html#a6d438abca367165d7a218e11772e2aa3", null ]
+    [ "sessid", "struct_d_m_c_info__t.html#af42cf7d97705c3e19b5754b1ca4b084e", null ],
+    [ "devnum", "struct_d_m_c_info__t.html#a0f79d0cb3babd698442cb5ff389b610a", null ],
+    [ "pdid", "struct_d_m_c_info__t.html#a27753fe95f9179afc2883d0ec7d3eb64", null ],
+    [ "imgtyp", "struct_d_m_c_info__t.html#a8a2011ff9ffcab9c3c1258da18508027", null ],
+    [ "fwverApp", "struct_d_m_c_info__t.html#a606aaf65983981a70ed5bf36812214d9", null ],
+    [ "fwverBoot", "struct_d_m_c_info__t.html#a1daa73ec4ddf68777b7200673bc11008", null ],
+    [ "szDevName", "struct_d_m_c_info__t.html#adf9e1bc9c8e0365b3c07e66b1752722d", null ],
+    [ "szManName", "struct_d_m_c_info__t.html#aa7916c38650442757e44e9927563aa9b", null ],
+    [ "szProdName", "struct_d_m_c_info__t.html#a221043f6943d93308f91d726a729186b", null ],
+    [ "szManDate", "struct_d_m_c_info__t.html#af87d8aca744b337017f546fd0a972577", null ],
+    [ "szHardwareVer", "struct_d_m_c_info__t.html#a880d070006c13b4342e8f36503466aa5", null ],
+    [ "szSN", "struct_d_m_c_info__t.html#a5b154423cacdf89b71d6e013ad95c546", null ]
 ];

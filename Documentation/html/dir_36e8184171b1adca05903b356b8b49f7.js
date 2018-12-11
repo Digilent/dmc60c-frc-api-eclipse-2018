@@ -1,4 +1,0 @@
-var dir_36e8184171b1adca05903b356b8b49f7 =
-[
-    [ "dmc60", "dir_b51fd34083b34fd9614c81401f17cd00.html", "dir_b51fd34083b34fd9614c81401f17cd00" ]
-];

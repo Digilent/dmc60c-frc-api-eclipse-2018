@@ -1,15 +1,14 @@
 var searchData=
 [
-  ['initsendable',['InitSendable',['../class_d_m_c60_1_1_d_m_c60_c.html#a9380ea5d1fa39c16a5238d308f491ac6',1,'DMC60::DMC60C']]],
-  ['invertencoder',['invertEncoder',['../class_d_m_c60_1_1_d_m_c60_c.html#a0fdfe5584024ae8f45a026fef2b08f0a',1,'DMC60::DMC60C']]],
-  ['isalive',['IsAlive',['../class_d_m_c60_1_1_d_m_c60_c.html#ae0b95fd3a67e22d3a68c2b8bd1bea89b',1,'DMC60::DMC60C']]],
-  ['iscurrentlimitactive',['isCurrentLimitActive',['../class_d_m_c60_1_1_d_m_c60_c.html#aadf9f9da0256803d533235fa9c85fecf',1,'DMC60::DMC60C']]],
-  ['iscurrentlimitenabled',['isCurrentLimitEnabled',['../class_d_m_c60_low_level.html#a8f15472551854fbc9d6652887fcdec39',1,'DMC60LowLevel']]],
-  ['isenabled',['isEnabled',['../class_d_m_c60_1_1_d_m_c60_c.html#a56722b6f1c22da04885bc9853148bb71',1,'DMC60::DMC60C']]],
-  ['isfwdlimitswitchactive',['isFwdLimitSwitchActive',['../class_d_m_c60_1_1_d_m_c60_c.html#aeb9c0d0ae10ea339382b9259f768b38e',1,'DMC60::DMC60C']]],
-  ['isgatedrivefaultactive',['isGateDriveFaultActive',['../class_d_m_c60_1_1_d_m_c60_c.html#a6a8e417a98b7ed547b99b192eeca9d8b',1,'DMC60::DMC60C']]],
-  ['isovertempfaultactive',['isOverTempFaultActive',['../class_d_m_c60_1_1_d_m_c60_c.html#aa40c22d0f9cc631f13ac6708ce1761fd',1,'DMC60::DMC60C']]],
-  ['isrevlimitswitchactive',['isRevLimitSwitchActive',['../class_d_m_c60_1_1_d_m_c60_c.html#a69e828d00667d78eab33681150677ee3',1,'DMC60::DMC60C']]],
-  ['issafetyenabled',['IsSafetyEnabled',['../class_d_m_c60_1_1_d_m_c60_c.html#a6f903fe4b5ab061f8d32e129d100ad33',1,'DMC60::DMC60C']]],
-  ['isundervoltagefaultactive',['isUnderVoltageFaultActive',['../class_d_m_c60_1_1_d_m_c60_c.html#a2949b4527e439620b9f86f8cbc15be3c',1,'DMC60::DMC60C']]]
+  ['initsendable',['InitSendable',['../class_d_m_c60_1_1_w_p_i___d_m_c60_c.html#a3921dd80b08bc525b6697d627b752037',1,'DMC60::WPI_DMC60C']]],
+  ['invertencoder',['invertEncoder',['../class_d_m_c60_1_1_d_m_c60_c.html#a230c31311002bc5905301c2827fffd8a',1,'DMC60::DMC60C']]],
+  ['isalive',['IsAlive',['../class_d_m_c60_1_1_w_p_i___d_m_c60_c.html#a3b24da482d2bf974066a2202f3f811ab',1,'DMC60::WPI_DMC60C']]],
+  ['iscurrentlimitactive',['isCurrentLimitActive',['../class_d_m_c60_1_1_d_m_c60_c.html#a0fb0f8a300c30f27c0f297c6b442fb52',1,'DMC60::DMC60C']]],
+  ['isenabled',['isEnabled',['../class_d_m_c60_1_1_d_m_c60_c.html#a8911e6426cde3fd2f9c10a0659387a87',1,'DMC60::DMC60C']]],
+  ['isfwdlimitswitchactive',['isFwdLimitSwitchActive',['../class_d_m_c60_1_1_d_m_c60_c.html#adc522ebd57fff9a759894fdf85056d9d',1,'DMC60::DMC60C']]],
+  ['isgatedrivefaultactive',['isGateDriveFaultActive',['../class_d_m_c60_1_1_d_m_c60_c.html#adbf91d226890f8c28a7d27a14417ea3d',1,'DMC60::DMC60C']]],
+  ['isovertempfaultactive',['isOverTempFaultActive',['../class_d_m_c60_1_1_d_m_c60_c.html#a05a1b82fa853ba45819b33a021e7f5d4',1,'DMC60::DMC60C']]],
+  ['isrevlimitswitchactive',['isRevLimitSwitchActive',['../class_d_m_c60_1_1_d_m_c60_c.html#af45f420843124d08941b992713b282c4',1,'DMC60::DMC60C']]],
+  ['issafetyenabled',['IsSafetyEnabled',['../class_d_m_c60_1_1_w_p_i___d_m_c60_c.html#a47bff46b444e7c21fa89ca1a07a228d2',1,'DMC60::WPI_DMC60C']]],
+  ['isundervoltagefaultactive',['isUnderVoltageFaultActive',['../class_d_m_c60_1_1_d_m_c60_c.html#ac40c11648491221587399dc134991559',1,'DMC60::DMC60C']]]
 ];

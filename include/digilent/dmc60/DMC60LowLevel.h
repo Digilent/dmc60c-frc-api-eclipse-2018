@@ -1,7 +1,5 @@
 #pragma once
 #include "digilent.h"
-#include <FRC_NetworkCommunication/CANSessionMux.h>
-
 #include "CANframes.h"
 #include "Commands.h"
 #include "Parameters.h"
@@ -965,17 +963,11 @@ public:
 	/**
 	 * \fn DMC_Code enableCurrentLimit(bool enabled)
 	 * \brief Enables or disables current limiting mode.
-	 * \param enabled If true, enables current limiting. If false, disables current limiting.
+	 * \param enabled If true, enabled current limiting. If false, disables current limiting.
 	 * \return DMC_Code Status code.
 	 */
 	DMC_Code enableCurrentLimit(bool enabled);
 
-	/**
-	 * \fn DMC_Code isCurrentLimitEnabled(bool *enabled)
-	 * \brief Returns whether or not the current limit is enabled.
-	 * \param enabled If true, current limiting enabled. If false, current limiting disabled.
-	 * \return DMC_Code Status code.
-	 */
 	DMC_Code isCurrentLimitEnabled(bool *enabled);
 
 	DMC_Code setCurrentLimitPGain(double P);
@@ -1054,7 +1046,7 @@ private:
 		uint32_t periodMs;
 	}controlFrame_t;
 	std::map <uint32_t, controlFrame_t> _controlFrames;
-	CANCTRL0 _control0 = {0};
+	CANCTRL0 _control0 = {0,0,0,0,0,0,0,0,0,0,0,0,1024};
 
 	typedef struct{
 		struct timespec time;

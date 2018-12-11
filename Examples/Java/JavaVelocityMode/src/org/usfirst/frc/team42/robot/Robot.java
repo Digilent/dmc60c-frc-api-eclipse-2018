@@ -26,6 +26,9 @@ public class Robot extends IterativeRobot {
 		//The PID constants can be configured here or in the web configuration utility.
 		//_dmc60c.ConfigPID(0, (float).1, (float).001, (float)0, (float)0);
 		_dmc60c.SetPIDSlot(0);//Set current PID slot to 0.
+		_dmc60c.InvertEncoder(true);//If the motor is not responding correctly, the encoder might need to be inverted.
+		_dmc60c.setInverted(false);//Change this to change the direction of forward and backward.
+
 	}
 
 	public void teleopInit() {
@@ -39,12 +42,12 @@ public class Robot extends IterativeRobot {
 			SmartDashboard.putNumber("Speed (MPS)", Y);
 		}
 		else {//No button is pressed
-			_dmc60c.Disable();
+			_dmc60c.disable();
 		}
 	}
 	
 	public void disabledInit() {
-		_dmc60c.Disable();
+		_dmc60c.disable();
 	}
 
 }

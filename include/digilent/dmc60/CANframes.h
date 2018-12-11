@@ -194,7 +194,7 @@ typedef struct {
 		struct {
 			unsigned short imgtyp : 2;
 			unsigned short rsv : 14;
-		};
+		}imgtype_t;
 		unsigned short flgs;
 	};
 	unsigned short    fwverApp;
@@ -206,7 +206,7 @@ typedef struct {
 		struct {
 			unsigned short imgtyp : 2;
 			unsigned short rsv : 14;
-		};
+		}imgtype_t;
 		unsigned short flgs;
 	};
 	unsigned short    fwverApp;
@@ -245,7 +245,7 @@ typedef struct {
 			unsigned char valueML;
 			unsigned char valueMH;
 			unsigned char valueH;
-		};
+		}value_t;
 		unsigned long value;
 	};
 } PARAMSET;

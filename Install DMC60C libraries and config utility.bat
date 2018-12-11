@@ -37,15 +37,15 @@ set PASSOPT=-pw !Password!
 )
 .\pscp.exe %PASSOPT% -r "dmc60c-config-utility-release" %USER%@%IPADDR%:/home/admin
 if %ERRORLEVEL% NEQ 0 exit
-.\pscp.exe %PASSOPT% "%USERPROFILE%\wpilib\common\current\lib\linux\athena\shared\*.so" %USER%@%IPADDR%:/usr/local/frc/lib
-.\pscp.exe %PASSOPT% "%USERPROFILE%\wpilib\common\current\lib\linux\athena\shared\*.so.3.2" %USER%@%IPADDR%:/usr/local/frc/lib
+.\pscp.exe %PASSOPT% "%USERPROFILE%\wpilib\common\current\lib\linux\athena\shared\libwpiHal.so" %USER%@%IPADDR%:/usr/local/frc/lib
+.\pscp.exe %PASSOPT% "%USERPROFILE%\wpilib\common\current\lib\linux\athena\shared\libwpiutil.so" %USER%@%IPADDR%:/usr/local/frc/lib
 .\plink -batch -l %USER% %PASSOPT% %IPADDR% chmod +x /home/admin/dmc60c-config-utility-release/install.sh
 .\plink -batch -l %USER% %PASSOPT% %IPADDR% chmod +x /home/admin/dmc60c-config-utility-release/uninstall.sh
 .\plink -batch -l %USER% %PASSOPT% %IPADDR% /home/admin/dmc60c-config-utility-release/install.sh
 
 :LOCAL
 XCOPY /I /Y "include\digilent\dmc60\*" "%USERPROFILE%\wpilib\user\cpp\include\digilent\dmc60\"
-XCOPY /I /Y "dmc60c-config-utility-release\libdmc60c.so*" "%USERPROFILE%\wpilib\user\cpp\lib"
+XCOPY /I /Y "dmc60c-config-utility-release\libdmc60c*" "%USERPROFILE%\wpilib\user\cpp\lib"
 XCOPY /I /Y "Java\dmc60cJNI.jar*" "%USERPROFILE%\wpilib\user\java\lib"
 set KEY_NAME="HKLM\SOFTWARE\WOW6432Node\National Instruments\IMAQ Vision\17.0.0"
 set VALUE_NAME=LV2017PATH

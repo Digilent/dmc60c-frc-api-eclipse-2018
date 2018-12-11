@@ -49,11 +49,11 @@ public class Robot extends IterativeRobot {
 			SmartDashboard.putNumber("Duty Cycle", YAxis);
 		}
 		else {//No button is pressed
-			_dmc60c.Disable();
+			_dmc60c.disable();
 		}
 	}
 	
 	public void disabledInit() {
-		_dmc60c.Disable();
+		_dmc60c.disable();
 	}
 }

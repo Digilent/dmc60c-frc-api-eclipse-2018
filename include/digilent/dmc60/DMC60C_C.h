@@ -1,12 +1,8 @@
 #pragma once
 #include <sys/types.h>
-#include "MotorSafetyHelper.h"
-#include "MotorSafety.h"
-#include "ErrorBase.h"
-#include "DMC60LowLevel.h"
 #include <stdbool.h>
 #include <stdint.h>
-
+#include "digilent.h"
 
 #ifdef __cplusplus
 extern "C"{
@@ -81,20 +77,9 @@ extern "C"{
 	void c_DMC60C_configPositionReset(int dev, bool resetOnFwdLimit, bool resetOnRevLimit, bool resetOnIndex);
 	void c_DMC60C_configIndexActiveEdge(int dev, bool edge);
 
-	void c_DMC60C_Set(int dev, double speed);
-	double c_DMC60C_Get(int dev);
 	void c_DMC60C_SetInverted(int dev, bool isInverted);
 	bool c_DMC60C_GetInverted(int dev);
-	void c_DMC60C_Disable(int dev);
 
-	//MotorSafety
-	void c_DMC60C_SetExpiration(int dev, double timeout);
-	double c_DMC60C_GetExpiration(int dev);
-	bool c_DMC60C_IsAlive(int dev);
-	void c_DMC60C_StopMotor(int dev);
-	void c_DMC60C_SetSafetyEnabled(int dev, bool enabled);
-	bool c_DMC60C_IsSafetyEnabled(int dev);
-//	void c_DMC60C_GetDescription(int dev, llvm::raw_ostream& desc);
 
 
 

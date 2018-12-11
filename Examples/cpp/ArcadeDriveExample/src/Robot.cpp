@@ -10,7 +10,7 @@
 
 #include <IterativeRobot.h>
 #include "Joystick.h"
-#include "digilent/DMC60/DMC60C.h"
+#include "digilent/DMC60/WPI_DMC60C.h"
 
 /**
  * This project uses a joystick to control 2 DMC60c's on a robot with Arcade drive.
@@ -24,8 +24,8 @@ public:
 
 	//Create a DMC60C object with device number 5 and 2.
 	//Since this is open loop, we don't need wheel and gearbox measurements.
-	DMC60::DMC60C * _dmc = new DMC60::DMC60C(5);
-	DMC60::DMC60C * _dmc2 = new DMC60::DMC60C(2);
+	DMC60::WPI_DMC60C * _dmc = new DMC60::WPI_DMC60C(5);
+	DMC60::WPI_DMC60C * _dmc2 = new DMC60::WPI_DMC60C(2);
 
 	bool _btn2 = false;
 	bool _startbutton = false;
