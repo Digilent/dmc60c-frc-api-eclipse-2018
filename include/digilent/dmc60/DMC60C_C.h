@@ -39,7 +39,7 @@ extern "C"{
 	float c_DMC60C_getI(int dev, unsigned int slot);
 	float c_DMC60C_getD(int dev, unsigned int slot);
 	float c_DMC60C_getF(int dev, unsigned int slot);
-	float c_DMC60C_getClosedLoopError(int dev);
+	double c_DMC60C_getClosedLoopError(int dev);
 
 	void c_DMC60C_setLimitSwitches(int dev, bool overrideEnable, bool forwardSwitchEnable, bool reverseSwitchEnable);
 	bool c_DMC60C_getFwdLimitSwitch(int dev);

@@ -186,9 +186,9 @@ JNIEXPORT jfloat JNICALL Java_com_dmc60c_DMC60CJNI_GetF
 /*
  * Class:     com_dmc60c_DMC60CJNI
  * Method:    GetClosedLoopError
- * Signature: (I)F
+ * Signature: (I)D
  */
-JNIEXPORT jfloat JNICALL Java_com_dmc60c_DMC60CJNI_GetClosedLoopError
+JNIEXPORT jdouble JNICALL Java_com_dmc60c_DMC60CJNI_GetClosedLoopError
   (JNIEnv *, jclass, jint);
 
 /*
